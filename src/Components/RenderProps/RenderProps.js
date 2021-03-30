@@ -1,7 +1,10 @@
-import React from 'react'
-import '../style.css'
+import React from 'react';
+import Toggle from './Toggle';
+import ToggleRP from './ToggleRP';
+import '../style.css';
 
 const RenderProps = props => {
+
   return (
     <section className="advanced-react-section">
       <h1>
@@ -14,6 +17,20 @@ const RenderProps = props => {
           Docs
         </a>
       </h1>
+      <ToggleRP render={(bool, toggleBool) => {
+        return (
+          <div>
+            {bool ? 'Hello Friend!' : null}
+            <button onClick={toggleBool}>CLICK!</button>
+          </div>
+        )
+      }} />
+      <Toggle >
+        <h1>
+          Hey you GUYYYZ!
+        </h1>
+      </Toggle>
+
     </section>
   )
 }
